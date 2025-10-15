@@ -1,5 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 nav, 
@@ -13,15 +14,24 @@ nav,
 
 header {
     position: relative;
-    background: #525151;
+    background: #232323;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
     font-size: 1.5rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.3rem;
 }
 
 nav {
     position: absolute;
-    background: #525151;
+    background: #232323;
     left: 0px;
     font-size: 1rem;
 }
@@ -34,13 +44,21 @@ nav a {
     padding: 10px 20px;
 }
 
-@media (min-width: 600px) {
+.h-menu {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
+
+@media (min-width: 480px) {
     nav {
         display: block;
         position: static;
+        padding: 0px 20px;
     }
 
     .h-menu {
+        position: static;
         display: none;
     }
 
