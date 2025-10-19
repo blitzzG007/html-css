@@ -1,0 +1,40 @@
+:root {
+    --background: #222;
+    --text-color: #fff;
+    --primary-color: #a30b05;
+    --secondary-color: #008;
+    --font-size-small: 15px;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: var(--font-size-small);
+    text-align: center;
+}
+
+.container {
+    background: var(--background);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 800px;
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+}
+
+
+.item1 {
+    background: var(--primary-color);
+    width: 100px;
+    height: 100px;
+}
+
+.item2 {
+    background: var(--secondary-color);
+    width: 100px;
+    height: 100px;
+}
