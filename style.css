@@ -1,0 +1,31 @@
+:root {
+    --text-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: inherit;
+}
+
+
+body {
+    background: #222;
+    color: var(--text-color);
+}
+
+.cont-itachi h2 {
+    color: #db2b1c;
+}
+
+.cont-sasuke h2 {
+    color: #6a3777;
+}
+
+.cont-madara h2 {
+    color: #2540C5;
+}
