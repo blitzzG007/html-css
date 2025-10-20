@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="restaurant.css">
     <title>Kebabi | Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #222;
+            color: #fff;
+        }
+
+        #menu {
+            margin: 20px;
+        }
+
+        #menu article {
+            margin: 20px 0;
+        }
+
+        #order {
+            margin: 20px;
+        }
+
+        .form-wrapper {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <figure>
+            <img id="header-img" src="https://www.aiche.org/sites/default/files/images/conference/lead/foodie24-shutterstock_467823857.jpeg" alt="Picture of six people sittiong on a table with full of food">
+        </figure>
         <h1>Welcome to KEBABI</h1>
         <nav>
             <ul>
@@ -17,8 +48,65 @@
         </nav>
     </header>
     <main>
-        <section></section>
-        <section></section>
+        <section id="menu">
+            <h2>Menu</h2>
+            <article class="lasagne">
+                <figure>
+                    <img src="https://siljespiser.no/wp-content/uploads/2020/08/IMG_3448.jpg" alt="Sliced away lasagne with tomato and bread beside it" width="200">
+                </figure>
+                <h3>Lasagne - An Italian Classic</h3>
+                <p>Layers of wide, flat pasta sheets alternated with rich
+                fillings—typically a hearty meat ragù (sauce), creamy
+                besciamella (bechamel) sauce, and a blend of cheeses like
+                mozzarella, ricotta, and Parmesan. Baked al forno (in the oven)
+                until piping hot and golden. A comforting, flavorful
+                favorite.</p>
+            </article>
+            <article class="burger">
+                <figure>
+                    <img src="https://cdn.pixabay.com/photo/2022/07/15/18/16/beef-burger-7323692_1280.jpg" alt="" width="200">
+                </figure>
+                <h3>Burger - The Flavorful Flame-Broiled Burger</h3>
+                <p>A satisfying beef burger, often flame-broiled for a smoky,
+                distinct flavor. Traditionally served on a toasted bun with
+                classic toppings and a special sauce, possibly drawing
+                inspiration from the original American fast-food chain or its
+                popular Norwegian/Swedish namesake, which translates to "Beef
+                Burger."</p>
+            </article>
+            <article class="pizza">
+                <figure>
+                    <img src="https://ik.imagekit.io/schysstkak/photos/1x1/SCHYSST_KAK_Spicy_kebabpizza_Recept_1x1.png" alt="Picture of a hand over Pizza" width="200">
+                </figure>
+                <h3>Kebab Pizza - A Swedish-Turkish Fusion</h3>
+                <p>A unique pizza creation popular in Sweden, combining Italian
+                and Turkish flavors. Featuring a pizza base topped with tomato
+                sauce and cheese, it's finished with thin slices of seasoned
+                kebab meat (often beef or chicken), fresh vegetables like
+                lettuce and onions, and a generous drizzle of a creamy,
+                sometimes spicy, garlic or yogurt-based kebab sauce.</p>
+            </article>
+        </section>
+        <section id="order-form">
+            <h2>Place Your Order</h2>
+            <div class="form-wrapper">
+                <form action="#">
+                    <label for="lasagne">Lasagne</label>
+                    <input id="lasagne" type="number" min="0" max="7">
+                    <br><br>
+                    <label for="lasagne">Biff Burger</label>
+                    <input id="lasagne" type="number" min="0" max="7">
+                    <br><br>
+                    <label for="lasagne">Kebab Pizza</label>
+                    <input id="lasagne" type="number" min="0" max="7">
+                    <br><br>
+                    <label for="message">Leave a comment:</label> <br>
+                    <textarea name="message" id="message" rows="5" cols="30" maxlength="250"></textarea>
+                    <br><br>
+                    <input type="submit" value="Go to checkout">
+                </form>
+            </div>
+        </section>
     </main>
     <footer>
         <p>Kebabi &copy;</p>
