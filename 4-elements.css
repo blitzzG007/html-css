@@ -8,19 +8,27 @@
 body {
     background: #222;
     color: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
-header {
-    background: #000;
+/* Links */
+
+header, 
+footer {
     display: flex;
     align-items: center;
-    padding: 5px 0;
+    background: #000;
+    padding: 10px 0;
+}
+
+footer {
+    justify-content: space-around;
 }
 
 .logo {
     margin-left: 25px;
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 150px;
 }
 
 nav {
@@ -37,19 +45,136 @@ nav li a {
     padding: 10px;
     color: #fff;
     text-decoration: none;
-    transition: 0.45s ease-in;
+    transition: 0.35s ease-in;
 }
 
 nav li a:hover {
     background: #fff;
     padding: 5px;
     color: #000;
-    border-radius: 5px;
 } 
 
+nav li a:hover {
+    background: #fff;
+    padding: 5px;
+    color: #000;
+} 
 
-/*Welcome*/
+nav li a:hover {
+    background: #fff;
+    padding: 5px;
+    color: #000;
+} 
+
+nav li a:hover {
+    background: #fff;
+    padding: 5px;
+    color: #000;
+} 
+
+nav li a:hover {
+    background: #fff;
+    padding: 5px;
+    color: #000;
+} 
+
+/* Content */
+main {
+    background: #000;
+}
 #welcome {
-    background: url(https://jasonlouro.ghost.io/content/images/2023/03/Types-of-Nature-Magic.webp) center center no-repeat;
+    margin-top: 2.5px;
+    background: rgba(0, 0, 0, .7) url(https://c4.wallpaperflare.com/wallpaper/782/574/495/avatar-the-last-airbender-aang-katara-prince-zuko-wallpaper-preview.jpg) right center no-repeat;
     background-size: cover;
+    background-blend-mode: darken;
+}
+
+#welcome h1, 
+#welcome p {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+#welcome p {
+    margin-top: 20px;
+    width: 400px;
+}
+
+.em-container {
+    position: relative;
+    padding: 100px 0;
+}
+
+.elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 50px 0;
+}
+
+.element {
+    width: 100%;
+    max-width: 200px;
+}
+
+
+.text {
+    font-size: 2.5rem;
+}
+
+.fire h2{
+    position: absolute;
+    left: 255px;
+}
+
+.water h2{
+    position: absolute;
+    left: 495px;
+}
+
+.earth h2{
+    position: absolute;
+    right: 495px;
+}
+
+.wind h2{
+    position: absolute;
+    right: 240px;
+}
+
+
+@media (max-width: 600px) {
+    .em-container {
+        position: relative;
+    }
+
+    .elements {
+        flex-direction: column;
+    }
+
+    .text {
+        font-size: 1.8rem;
+    }
+
+    .fire h2 {
+        top: 35px;
+        left: 200px;
+    }
+
+    .water h2 {
+        top: 145px;
+        left: 200px;
+    }
+
+    .earth h2 {
+        top: 260px;
+        left: 200px;
+    }
+
+    .wind h2 {
+        top: 380px;
+        left: 200px;
+    }
 }
