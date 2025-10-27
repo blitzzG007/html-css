@@ -12,10 +12,9 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-/* Links */
-
 header, 
 footer {
+    position: relative;
     display: flex;
     align-items: center;
     background: #000;
@@ -31,6 +30,7 @@ footer {
     max-width: 150px;
 }
 
+/* Links */
 nav {
     margin-left: 40px;
 }
@@ -42,51 +42,37 @@ li {
 nav li a {
     font-size: 1.0rem;
     font-weight: 600;
-    padding: 10px;
+    padding: 15px;
     color: #fff;
-    text-decoration: none;
+}
+
+.home {
+    text-decoration: underline;
     transition: 0.35s ease-in;
 }
 
-nav li a:hover {
-    background: #fff;
-    padding: 5px;
-    color: #000;
+.home:hover {
+    text-decoration: none;
 } 
 
-nav li a:hover {
-    background: #fff;
-    padding: 5px;
-    color: #000;
-} 
+#menu-check {
+    display: none;
+}
 
-nav li a:hover {
-    background: #fff;
-    padding: 5px;
-    color: #000;
-} 
-
-nav li a:hover {
-    background: #fff;
-    padding: 5px;
-    color: #000;
-} 
-
-nav li a:hover {
-    background: #fff;
-    padding: 5px;
-    color: #000;
-} 
+.menu {
+    display: none;
+}
 
 /* Content */
 main {
-    background: #000;
+    background: #001122;
 }
 #welcome {
     margin-top: 2.5px;
     background: rgba(0, 0, 0, .7) url(https://c4.wallpaperflare.com/wallpaper/782/574/495/avatar-the-last-airbender-aang-katara-prince-zuko-wallpaper-preview.jpg) right center no-repeat;
     background-size: cover;
     background-blend-mode: darken;
+    padding: 10px 0;
 }
 
 #welcome h1, 
@@ -125,33 +111,98 @@ main {
 }
 
 .fire h2{
+    color: rgba(255, 255, 255, .1);
+    background: url('https://img.freepik.com/free-vector/burning-flame-border-sticker-realistic-fire-image-vector_53876-140121.jpg?semt=ais_hybrid&w=740&q=80') center bottom no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
     position: absolute;
-    left: 255px;
+    left: 235px;
 }
 
 .water h2{
+    color: rgba(255, 255, 255, .1);
+    background: url('https://images.ctfassets.net/isq5xwjfoz2m/2Xefx5VKnRPx0cB3B5szGJ/f952b86a80d88b9addfc824c533db10c/AdobeStock_279001979__1_.jpeg?w=996&h=508&fl=progressive&q=80&fm=jpg') center center no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
     position: absolute;
-    left: 495px;
+    left: 465px;
+    
 }
 
 .earth h2{
+    color: rgba(255, 255, 255, .1);
+    background: url('https://www.ayurvedacollege.com/wp-content/uploads/2010/06/Blog-Thumbnails.png') center center no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
     position: absolute;
-    right: 495px;
+    right: 475px;
 }
 
 .wind h2{
+    color: rgba(255, 255, 255, .1);
+    background: url('https://theelementalmind.com/wp-content/uploads/2025/02/create-a-highly-detailed-high-resolution-image-that-captures-the-essence.png') center center no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
     position: absolute;
-    right: 240px;
+    right: 220px;
 }
 
 
 @media (max-width: 600px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    /* Links */
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        display: none;
+        margin: 0;
+        background: #000;
+    }
+
+    .home:hover {
+        background: none;
+        color: #fff;
+    }
+
+    #menu-check:checked ~ nav {
+        display: block;
+    }  
+
+    nav li {
+        display: block;
+    }
+
+    nav img {
+        padding: 5px 0;
+    }
+
+    .menu {
+        font-size: 25px;
+        display: block;
+        margin-right: 20px;
+    }
+
+    /* Content */
     .em-container {
         position: relative;
     }
 
     .elements {
         flex-direction: column;
+        gap: 20px;
     }
 
     .text {
@@ -159,22 +210,22 @@ main {
     }
 
     .fire h2 {
-        top: 35px;
-        left: 200px;
+        top: 185px;
+        left: 220px;
     }
 
     .water h2 {
-        top: 145px;
-        left: 200px;
+        top: 325px;
+        left: 220px;
     }
 
     .earth h2 {
-        top: 260px;
-        left: 200px;
+        top: 460px;
+        left: 220px;
     }
 
     .wind h2 {
-        top: 380px;
-        left: 200px;
+        top: 595px;
+        left: 220px;
     }
 }
